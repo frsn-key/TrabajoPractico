@@ -60,46 +60,67 @@ public class ListaDobleEnlazada {
         if(index == pos){return iterator.getDato();}
         return null;
     }
-    public Boolean insertar(int pos,Object Dato){
-        if (this.estaVacia()){return false;}
+    public Boolean insertar(int pos, Object Dato) {
         NodoDobleEnlace nodo = new NodoDobleEnlace();
         nodo.setDato(Dato);
         NodoDobleEnlace iterator = this.getPrimero();
-        if (pos == 1){
+
+        if (pos == 1 || iterator == null) {
             nodo.setSiguiente(iterator);
+            if (iterator != null) {
+                iterator.setAnterior(nodo);
+            }
             this.setPrimero(nodo);
             return true;
         }
-        int index =  1;
-        while((iterator.getSiguiente()!=null)&&(index < pos)){
+
+        int index = 1;
+        while (iterator.getSiguiente() != null && index < pos) {
             iterator = iterator.getSiguiente();
             index++;
         }
-        if(pos != index){return false;}
+
+        if (index != pos) {
+            return false; // La posición no existe en la lista
+        }
+
         nodo.setSiguiente(iterator);
         nodo.setAnterior(iterator.getAnterior());
         iterator.setAnterior(nodo);
+
         return true;
     }
-    public Boolean Eliminar(int pos){
-        if (this.estaVacia()){return false;}
+    public Boolean Eliminar(int pos) {
         NodoDobleEnlace iterator = this.getPrimero();
-        if (pos == 1){
-            this.setPrimero(this.primero.getSiguiente());
-            this.primero.setAnterior(null);
+
+        if (iterator == null) {
+            return false; // La lista está vacía
+        }
+
+        if (pos == 1) {
+            this.setPrimero(iterator.getSiguiente());
+            if (iterator.getSiguiente() != null) {
+                iterator.getSiguiente().setAnterior(null);
+            }
             return true;
         }
-        int index =  1;
-        while((iterator.getSiguiente()!=null)&&(index < pos)){
+
+        int index = 1;
+        while (iterator.getSiguiente() != null && index < pos) {
             iterator = iterator.getSiguiente();
             index++;
         }
-        if (index!=pos){return false;}
-        if(pos == this.cantidad()){
-            iterator.getAnterior().setSiguiente(null);
+
+        if (index != pos) {
+            return false; // La posición no existe en la lista
         }
+
         iterator.getAnterior().setSiguiente(iterator.getSiguiente());
-        iterator.getSiguiente().setAnterior(iterator.getAnterior());
+
+        if (iterator.getSiguiente() != null) {
+            iterator.getSiguiente().setAnterior(iterator.getAnterior());
+        }
+
         return true;
     }
 

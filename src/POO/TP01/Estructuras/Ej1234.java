@@ -67,7 +67,12 @@ public class Ej1234 {
         System.out.println(listaemlazada.toString());
     }
 
-
+    public void punto1(){
+        this.Cargar();
+        this.Cantidad();
+        this.insertar_Eliminar();
+        this.Cantidad();
+    }
 
 
 }
