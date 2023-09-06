@@ -23,4 +23,11 @@ public class Ej8 {
         }
     }
 
+    public void punto8(){
+        this.generarContrasenas();
+        System.out.println("------------------------------------------------------------------");
+        this.generarContrasenasFuertes();
+        System.out.println("\n------------------------------------------------------------------\n");
+    }
+
 }

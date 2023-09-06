@@ -1,18 +1,23 @@
 import POO.TP01.Contrasenas.Ej8;
 import POO.TP01.Admin.Biblioteca.Ej6;
 import POO.TP01.Fecha.Ej9;
+import POO.TP01.ListaTarea.Ej5;
+
 public class Main {
     public static void main(String[] args) {
-        Ej8 ej8 = new Ej8();
-        ej8.generarContrasenas();
-        System.out.println("------------------------------------------------------------------");
-        ej8.generarContrasenasFuertes();
-        System.out.println("\n------------------------------------------------------------------\n");
+        System.out.println("-----------------------------Punto 5:---------------------------------\n\n");
+        Ej5 ej5 = new Ej5();
+        ej5.Cargar();
+        System.out.println("-----------------------------Punto 6:---------------------------------\n");
         Ej6 ej6 = new Ej6();
-        ej6.Prestar();
-        ej6.Catidad_Prestamos();
+        ej6.punto6();
+        System.out.println("-----------------------------Punto 8:---------------------------------\n");
+        Ej8 ej8 = new Ej8();
+        ej8.punto8();
+        System.out.println("-----------------------------Punto 9:---------------------------------\n");
         Ej9 ej9 = new Ej9();
         ej9.Comparar();
+
 
 
     }

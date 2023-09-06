@@ -86,6 +86,9 @@ public class Ej6 {
         System.out.println("Cantidad de prestamos realizados : "+this.biblioteca.Cantidad_de_Prestamos_Actuales());
     }
 
-
+    public void punto6(){
+        this.Prestar();
+        this.Catidad_Prestamos();
+    }
 
 }

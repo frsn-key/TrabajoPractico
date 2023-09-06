@@ -13,16 +13,16 @@ public class Ej5 {
             lista.anadirTarea(tarea1);
             lista.anadirTarea(tarea2);
         }
-        System.out.println("___________________________Normal____________________");
+        System.out.println("----------------------Normal----------------------");
         System.out.println(lista.toString());
         lista.actualizar_vencidas();
-        System.out.println("______________________Actualizar vencidas___________________________");
+        System.out.println("----------------------Actualizar vencidas----------------------");
         System.out.println(lista.toString());
-        System.out.println("_______________________Ordenadas por prioridad y fecha_____________________");
+        System.out.println("----------------------Ordenadas por prioridad y fecha----------------------");
         System.out.println(lista.sin_vencer_Ordenadas().toString());
-        System.out.println("_______________________Ordenadas por fecha_____________________");
+        System.out.println("----------------------Ordenadas por fecha----------------------");
         System.out.println(lista.sin_vencer_Ordenadas(ListadeTareas.Filtro.FECHA).toString());
-        System.out.println("_______________________Ordenadas por prioridad_____________________");
+        System.out.println("----------------------Ordenadas por prioridad----------------------");
         System.out.println(lista.sin_vencer_Ordenadas(ListadeTareas.Filtro.PRIORIDAD).toString());
 
     }
