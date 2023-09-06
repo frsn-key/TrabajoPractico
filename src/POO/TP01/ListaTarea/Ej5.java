@@ -6,7 +6,7 @@ public class Ej5 {
     ListadeTareas lista = new ListadeTareas();
 
     public void Cargar(){
-        for (int i = 10; i > 0; i--) {
+        for (int i = 5; i > 0; i--) {
             Tarea tarea1 = new Tarea("Sin Recordatorio"+i , Tarea.Prioridad.ALTA, LocalDate.of(2023,9,3+(i*2)));
             Tarea tarea2 = new Tarea("Con Recordatorio"+i , Tarea.Prioridad.BAJA, LocalDate.of(2023,9,3+(i*2)),
                     LocalDate.of(2023,9,(3+i)));
