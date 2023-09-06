@@ -127,7 +127,7 @@ public class ListadeTareas {
     }
 
     public Tarea RecuperarTarea(int index){
-        if(index>this.Tareas.size()){
+        if(index>=this.Tareas.size()){
             return null;
         }
         return this.Tareas.get(index-1);

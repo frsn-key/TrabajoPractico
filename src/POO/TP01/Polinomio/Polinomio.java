@@ -11,11 +11,11 @@ package POO.TP01.Polinomio;
 */
 
 public class Polinomio {
-    final private int A;
-    final private int B;
-    final private int C;
+    final private double A;
+    final private double B;
+    final private double C;
 
-    public Polinomio(int a, int b, int c) {
+    public Polinomio(double a, double b, double c) {
         A = a;
         B = b;
         C = c;
