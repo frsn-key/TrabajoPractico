@@ -5,16 +5,16 @@ import java.util.ArrayList;
 public class Game {
 
     static private String Letras_suman_mas= "kzxywq";
-    static private ArrayList<String> Dicconario;
+    static private Diccionario diccionario;
     private ArrayList<Jugador> jugadores ;
 
 
-    public Boolean existe(String palabra){
-        return Dicconario.contains(palabra);
+    public Boolean agregar_palabra_valida(String palabra){
+        return diccionario.Agregar_Palabra_Valida(palabra);
     }
 
     public int Puntos_segun_palabra(String palabra,Jugador jugador){
-        if(!(this.existe(palabra))){
+        if(!(diccionario.Valida(palabra))){
             return 0;
         }
         int puntos = 0;
