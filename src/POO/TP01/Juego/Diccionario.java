@@ -6,16 +6,11 @@ public class Diccionario {
     static private ArrayList<String> Palabras;
 
     public Diccionario() {
-        Palabras.add("Hola");
-        Palabras.add("Quiosco");
-        Palabras.add("Kiosco");
-        Palabras.add("Zorro");
-        Palabras.add("yoyo");
-        Palabras.add("windows");
-        Palabras.add("Perro");
-        Palabras.add("Gato");
-        Palabras.add("Auto");
-        Palabras.add("Avion");
+
+    }
+
+    public Diccionario(ArrayList<String> palabras){
+        Palabras.addAll(palabras);
     }
 
     public Boolean Valida(String palabra){
@@ -30,6 +25,7 @@ public class Diccionario {
             return true;
         }
     }
+
 
 
 

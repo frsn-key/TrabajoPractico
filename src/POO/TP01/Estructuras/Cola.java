@@ -41,7 +41,7 @@ public class Cola {
     public String toString() {
         String result = "{Cola: ";
         Nodo iterator = this.getComienzo();
-        while(iterator.getSiguiente()!=null){
+        while(iterator!=null){
             result = result.concat(iterator.getDato().toString()+",");
             iterator = iterator.getSiguiente();
         }

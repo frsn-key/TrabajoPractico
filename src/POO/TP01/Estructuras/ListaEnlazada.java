@@ -133,7 +133,7 @@ public class ListaEnlazada {
     public String toString() {
         String result = "{Lista: ";
         Nodo iterator = this.getPrimero();
-        while(iterator.getSiguiente()!=null){
+        while(iterator!=null){
             result = result.concat(iterator.getDato().toString()+",");
             iterator = iterator.getSiguiente();
         }

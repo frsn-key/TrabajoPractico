@@ -64,7 +64,6 @@ public class ListaDobleEnlazada {
         NodoDobleEnlace nodo = new NodoDobleEnlace();
         nodo.setDato(Dato);
         NodoDobleEnlace iterator = this.getPrimero();
-
         if (pos == 1 || iterator == null) {
             nodo.setSiguiente(iterator);
             if (iterator != null) {
@@ -84,8 +83,8 @@ public class ListaDobleEnlazada {
             return false; // La posición no existe en la lista
         }
 
-        nodo.setSiguiente(iterator);
         nodo.setAnterior(iterator.getAnterior());
+        nodo.setSiguiente(iterator);
         iterator.setAnterior(nodo);
 
         return true;
@@ -128,7 +127,7 @@ public class ListaDobleEnlazada {
     public String toString() {
         String result = "{ListaDobleEnlace: ";
         NodoDobleEnlace iterator = this.getPrimero();
-        while(iterator.getSiguiente()!=null){
+        while(iterator!=null){
             result = result.concat(iterator.getDato().toString()+",");
             iterator = iterator.getSiguiente();
         }

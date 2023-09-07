@@ -44,7 +44,7 @@ public class Pila {
     public String toString() {
         String result = "{Pila: ";
         Nodo iterator = this.getTop();
-        while(iterator.getSiguiente()!=null){
+        while(iterator!=null){
             result = result.concat(iterator.getDato().toString()+",");
             iterator = iterator.getSiguiente();
         }

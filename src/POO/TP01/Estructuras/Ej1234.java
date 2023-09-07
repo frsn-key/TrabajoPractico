@@ -10,9 +10,9 @@ public class Ej1234 {
     public void Cargar(){
         for (int i = 1; i < 11; i++) {
             Integer element = i;
+            pila.apilar(element);
             listaemlazada.agregar(element);
             listaedobleenlazada.agregar(element);
-            pila.apilar(element);
             cola.encolar(element);
         }
         System.out.println(listaedobleenlazada.toString());
